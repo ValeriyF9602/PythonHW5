@@ -11,3 +11,24 @@
 '''
 
 
+def summa(x, y):
+    if y == 0:
+        return x
+    return summa(x, y - 1) + 1
+
+
+
+flag = True
+
+while flag == True:
+
+    a = int(input('Введите неотрицательное число A: '))
+    b = int(input('Введите неотрицательное число B: '))
+    
+    if a >= 0 and b >= 0:
+        flag = False
+    
+    else:
+        print('\nПопробуйте ещё раз!')
+
+print(summa(a, b))
