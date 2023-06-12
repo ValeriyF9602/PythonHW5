@@ -10,3 +10,13 @@
 '''
 
 
+def Exponentiation(x, y):
+    if y == 0: return 1
+    elif y > 0: return Exponentiation(x, y - 1) * x
+    else: return 1 / (Exponentiation(x, -y - 1) * x)
+
+
+a = int(input('Введите число: '))
+b = int(input('Введите степень: '))
+
+print(Exponentiation(a, b))
